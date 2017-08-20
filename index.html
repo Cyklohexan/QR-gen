@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Generator</title>
+</head>
+<body>
+    <!--<canvas id="qr"></canvas>-->
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/qrious/dist/qrious.js"></script>
+    <script src="./src/hashGenerator.js"></script>
+    <script src="./src/main.js"></script>
+
+    <div class="qr-form">
+        <h2>QR Generator</h2>
+        <input id="root" type="text" class="form-control custom-input" placeholder="Root URL" value="localhost:3000">
+        <input id="hashLength" type="number" class="form-control custom-input" placeholder="Hash length" value="32">
+        <input id="hashCount" type="number" class="form-control custom-input" placeholder="Hash count">
+        <button class="btn btn-primary" id="generateBtn">Generate</button>
+        <div id="qrSpace">
+            <p id="generatedQR"></p>
+            <canvas id="qr"></canvas>
+        </div>
+    </div>
+</body>
+</html>
